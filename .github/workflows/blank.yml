@@ -34,4 +34,8 @@ jobs:
         aws-region: us-east-1
         role-to-assume: ${{ secrets.AWS_ROLE_TO_ASSUME }}
         role-duration-seconds: 1200
-        role-session-name: GithubActions
+        role-session-name: ${{ secrets.AWS_SESSION_NAME }}
+      
+    - name: Test listing S3 buckets AWS CLI
+      run: |
+        aws s3 ls
