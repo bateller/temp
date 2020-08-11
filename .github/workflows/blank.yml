@@ -36,6 +36,6 @@ jobs:
         role-duration-seconds: 1200
         role-session-name: ${{ secrets.AWS_SESSION_NAME }}
       
-    - name: Test listing S3 buckets AWS CLI
+    - name: Test listing Lambda Functions via AWS CLI
       run: |
-        aws s3 ls
+        aws lambda list-functions
