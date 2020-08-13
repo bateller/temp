@@ -39,3 +39,7 @@ jobs:
     - name: Test CloudFormation DescribeStacks via AWS CLI
       run: |
         aws cloudformation describe-stacks --stack-name dobby-api-testing
+  
+    - name: Test listing s3 bucket files via AWS CLI
+      run: |
+        aws s3 ls dobby-testing-us-east-1
