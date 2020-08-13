@@ -36,6 +36,6 @@ jobs:
         role-duration-seconds: 1200
         role-session-name: ${{ secrets.AWS_SESSION_NAME }}
       
-    - name: Test listing s3 bucket files via AWS CLI
+    - name: Test CloudFormation DescribeStacks via AWS CLI
       run: |
-        aws s3 ls dobby-testing-us-east-1
+        aws cloudformation describe-stacks --stack-name dobby-api-testing
