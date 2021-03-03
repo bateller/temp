@@ -18,7 +18,6 @@ jobs:
     - name: Terraform fmt
       id: fmt
       run: terraform fmt
-
     - name: Terraform init
       id: init
       run: terraform init
